@@ -124,8 +124,8 @@ h3 {
 
 .heading-primary {
   line-height: 1;
-  font-size: var(--font-size-huge);
-  font-weight: 400;
+  font-size: var(--font-size-large);
+
 }
 
 @media (max-width: 900px) {
