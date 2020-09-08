@@ -1,0 +1,24 @@
+{
+  "name": "Bio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "node-sass styles/style.scss -o ../styles/dist/style.css",
+    "watch": "node-sass styles/style.scss -o ../styles/dist/style.css -w" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nada-ELFadili/Bio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nada-ELFadili/Bio/issues"
+  },
+  "homepage": "https://github.com/Nada-ELFadili/Bio#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
