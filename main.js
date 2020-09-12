@@ -54,8 +54,8 @@
 // }
 
 
-// ES6 Class
-class TypeWriter {
+// let's start again 
+class TypeWriter {             //variable
     constructor(txtElement, words, wait = 3000) {
       this.txtElement = txtElement;
       this.words = words;
@@ -89,7 +89,7 @@ class TypeWriter {
   
       if(this.isDeleting) {
         typeSpeed /= 2;
-      }
+      } 
   
       // If word is complete
       if(!this.isDeleting && this.txt === fullTxt) {
@@ -110,10 +110,10 @@ class TypeWriter {
   }
   
   
-  // Init On DOM Load
+  // Init On DOM Load      // second step is to do the dom load
   document.addEventListener('DOMContentLoaded', init);
   
-  // Init App
+  // Init App // third step 
   function init() {
     const txtElement = document.querySelector('.txt-type');
     const words = JSON.parse(txtElement.getAttribute('data-words'));
@@ -121,3 +121,4 @@ class TypeWriter {
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
   }
+
