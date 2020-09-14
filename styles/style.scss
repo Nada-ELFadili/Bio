@@ -740,10 +740,68 @@ body:not(.user-is-tabbing) a:focus {
      */
      .bt{
 
+        position: relative;
+        display: inline-block;
+        padding: 1rem 4.2rem;
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid  var(--pink);
+        font-weight: 400;
+        background: transparent;
 
-
-
-        
      }
+
+     
+.bt:focus {
+    outline: none;
+}
+
+.bt::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 100%;
+    background: var(--white);
+    height: 100%;
+    z-index: -1;
+    transition: all 0.2s cubic-bezier(1, 0.68, 0.16, 0.9);
+}
+
+.bt:hover::after,
+.bt:focus::after {
+    right: 0;
+    background: var(--pink);
+}
+
+.bt--pink {
+    background: var(--pink);
+    transition: all 0.2s;
+}
+
+.bt--pink::after {
+    display: none;
+}
+
+.bt--pink:hover,
+.bt--pink:focus {
+    background: transparent;
+}
+
+.form-control{
+
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom:1px solid grey;
+    color: var(--DarkTurquoise);
+    font-size: 18px;
+    margin-bottom: 16px;
+    
+    }
+
+
 
     
