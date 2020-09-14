@@ -522,12 +522,18 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .header {
         text-align: center;
+
+
     }
 
     .header__text p {
         transform: scale(.8);
     }
 }
+
+
+
+
 
 /* --------------------------------------- */
 /* ----- Work ----- */
@@ -602,27 +608,6 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Clients ----- */
 /* --------------------------------------- */
 
-.client__logos {
-    display: flex;
-    justify-content: space-between;
-    filter: invert(100%) grayscale(100%) opacity(.8);
-}
-
-.client__logo {
-    height: 6.5rem;
-    max-width: 18rem;
-}
-
-@media(max-width: 1240px) {
-    .client__logos {
-        overflow-x: scroll;
-        padding: var(--gutter-normal);
-    }
-
-    .client__logo:not(:last-of-type) {
-        margin-right: var(--gutter-medium);
-    }
-}
 
 /* --------------------------------------- */
 /* ----- About ----- */
@@ -709,7 +694,7 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
-
+/*
 
 .footer-contact-form {
     }
@@ -751,5 +736,72 @@ body:not(.user-is-tabbing) a:focus {
       .footer-contact-form {
         width: 100%; }
      }
+     */
      
-     
+
+     body{
+
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background: linear-gradient rgba(127, 54, 109, 0.5);
+        background-position: center;
+        font-family: sans-serif;
+        }
+        
+        .contact-tittle{
+        
+            margin-top: 100px;
+            text-transform: uppercase;
+            color: rgb(170, 12, 12);
+            transition: all 4s ease-in-out;
+        }
+        .contact-tittle h1{
+        font-size: 32px;
+        line-height: 10px;
+        
+        }
+        .contact-tittle h2{
+        
+           font-size: 16px;
+         
+        }
+        
+        .form{
+        margin-top: 50px;
+        transition: all 4s ease-in-out;
+        
+        }
+        .form-control{
+        
+        width: 600px;
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom:1px solid grey;
+        color: rgb(17, 156, 59);
+        font-size: 18px;
+        margin-bottom: 16px;
+        
+        }
+        
+        input{
+        
+            height: 45px;
+        }
+        form .submit{
+        
+            background: #6feaea;
+            border-color: transparent;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 2px;
+            height: 50px;
+            margin-top: 20px;
+        
+        }
+        form .submit:hover{
+            background-color: #1f6876;
+            cursor: pointer;
+        }
+        
