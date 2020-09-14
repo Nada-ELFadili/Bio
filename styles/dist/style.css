@@ -441,7 +441,7 @@ body:not(.user-is-tabbing) a:focus {
 .header {
   /* background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
        url('/images/header.jpg');*/
-  background: url(../images/1.jpg);
+  background: url(../../images/1.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -546,7 +546,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 /* --------------------------------------- */
 /* ----- Clients ----- */
-/* --------------------------------------- 
+/* --------------------------------------- */
 .client__logos {
   display: flex;
   justify-content: space-between;
@@ -567,7 +567,7 @@ body:not(.user-is-tabbing) a:focus {
   .client__logo:not(:last-of-type) {
     margin-right: var(--gutter-medium);
   }
-}*/
+}
 /* --------------------------------------- */
 /* ----- About ----- */
 /* --------------------------------------- */
