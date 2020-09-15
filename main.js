@@ -53,8 +53,11 @@
 //   setTimeout(() => this.type(), typeSpeed);
 // }
 
-
 // let's start again 
+
+
+
+
 class TypeWriter {             //variable
     constructor(txtElement, words, wait = 3000) {
       this.txtElement = txtElement;

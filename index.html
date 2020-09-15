@@ -8,10 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>
-    EFNada| A Web Developer , Morocco.</title>
-  
-    
+  <title>EFNada| A Web Developer , Morocco.</title>
   <meta name="description" content="#">
   <meta name="keywords" content="Nada" />
   <link rel="stylesheet" href="styles/dist/style.css">
@@ -66,9 +63,9 @@
 
           <div class="work__box">
             <div class="work__text">
-              <h3>My Portfolyo</h3>
+              <h3>Our 1st Work</h3>
               <p>
-                A free Open Source Portfolio for anyone to use for free.
+                A free Open Source Olivia for anyone want to See it for free.
               </p>
               <ul class="work__list">
                 <li>HTML</li>
@@ -78,10 +75,10 @@
               </ul>
 
               <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
+                <a href="#" target="_blank" class="link__text">
                   Visit Site <span>&rarr;</span>
                 </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
+                <a href="#" title="View Source Code" target="_blank">
                   <img src="./images/github.svg" class="work__code" alt="GitHub">
                 </a>
               </div>
@@ -105,8 +102,6 @@
                 <li>PHP</li>
               </ul>
 
-              
-
               <div class="work__links">
                 <a href="#" class="link__text">
                   Visit Site <span>&rarr;</span>
@@ -117,7 +112,7 @@
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/project2.png" class="work__image" alt="Project 1" />
+              <img src="./images/" class="work__image" alt="Project 1" />
             </div>
           </div>
 
@@ -125,8 +120,7 @@
             <div class="work__text">
               <h3>Notificator</h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
+                A free Open Source Taalimak for anyone want to See it for free.
               </p>
               <ul class="work__list">
                 <li>React</li>
@@ -163,11 +157,12 @@
             <!-- Replace the below paragraph with info about yourself -->
             <p>
               My Name is Nada ElFadili from Morocco,21 y.o
-              i'm Devlopper and Designer!
+              i'm Devlopper and Designer!<br>
+              i'm a creative and simple person ! who always like to run to every new knowledge 
               
             </p>
             <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+            <a href="./index2.html" class="btn">My Resume</a>
           </div>
 
           <div class="about__photo-container">
@@ -194,75 +189,82 @@
           will do my best to respond back. 😊 The quickest way to reach out to
           me is via an email.
         </p>
-        <i class="fas fa-file-powerpoint    "></i>
-        <!-- Replace the email with yours -->
+        
+        <!-- My email  -->
         <a href="https://mail.google.com/mail/u/0/#inbox" class="btn">EFNada98@gmail.com</a>
       </div>
     </div>
   </section>
 
 
-<center>
-  <h4 class="sent-notification"></h4>
+  <center>
+    <h4 class="sent-notification"></h4>
+  
+    <form id="myForm">
+      <h2>Send an Email</h2>
+  
+      <label>Name</label>
+      <input id="name" type="text" class="form-control" placeholder="Enter Name">
+      <br><br>
+  
+      <label>Email</label>
+      <input id="email" type="text" class="form-control" placeholder="Enter Email">
+      <br><br>
+  
+      <label>Subject</label>
+      <input id="subject" type="text" class="form-control" placeholder=" Enter Subject"> 
+      <br><br>
+  
+      <p>Message</p>
+      <textarea id="body" rows="5" class="form-control" placeholder="Type Message"></textarea>
+      <br><br>
+  
+      <button class="bt" type="button" onclick="sendEmail()" value="Send An Email">Submit</button> 
+    </form>
+  </center>
+  
+  <script type="text/javascript">
+ 
+        function sendEmail() {
+            var name = $("#name");
+            var email = $("#email");
+            var subject = $("#subject");
+            var body = $("#body");
+  
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
+                $.ajax({
+                   url: 'sendEmail.php',
+                   method: 'POST',
+                   dataType: 'json',
+                   data: {
+                       name: name.val(),
+                       email: email.val(),
+                       subject: subject.val(),
+                       body: body.val()
+                   }, success: function (response) {
+                        $('#myForm')[0].reset();
+                        $('.sent-notification').text("Message Sent Successfully.");
+                   }
+                });n
+            }
+        }
+  
+        function isNotEmpty(caller) {
+            if (caller.val() == "") {
+                caller.css('border', '1px solid red');
+                return false;
+            } else
+                caller.css('border', '');
+  
+            return true;
+        }
+    </script>
+  
 
-  <form id="myForm">
-    <h2>Send an Email</h2>
 
-    <label>Name</label>
-    <input id="name" type="text" class="form-control" placeholder="Enter Name">
-    <br><br>
 
-    <label>Email</label>
-    <input id="email" type="text" class="form-control" placeholder="Enter Email">
-    <br><br>
 
-    <label>Subject</label>
-    <input id="subject" type="text" class="form-control" placeholder=" Enter Subject"> 
-    <br><br>
 
-    <p>Message</p>
-    <textarea id="body" rows="5" class="form-control" placeholder="Type Message"></textarea>
-    <br><br>
-
-    <button class="bt" type="button" onclick="sendEmail()" value="Send An Email">Submit</button> 
-  </form>
-</center>
-
-<script type="text/javascript">
-      function sendEmail() {
-          var name = $("#name");
-          var email = $("#email");
-          var subject = $("#subject");
-          var body = $("#body");
-
-          if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(subject) && isNotEmpty(body)) {
-              $.ajax({
-                 url: 'sendEmail.php',
-                 method: 'POST',
-                 dataType: 'json',
-                 data: {
-                     name: name.val(),
-                     email: email.val(),
-                     subject: subject.val(),
-                     body: body.val()
-                 }, success: function (response) {
-                      $('#myForm')[0].reset();
-                      $('.sent-notification').text("Message Sent Successfully.");
-                 }
-              });
-          }
-      }
-
-      function isNotEmpty(caller) {
-          if (caller.val() == "") {
-              caller.css('border', '1px solid red');
-              return false;
-          } else
-              caller.css('border', '');
-
-          return true;
-      }
-  </script>
 
 
 
@@ -271,7 +273,7 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
+      <!--  the links -->
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
           <a href="https://twitter.com/NadaElfadili" title="Link to Twitter Profile">
@@ -311,8 +313,7 @@
   </a>-->
   <script src="./index.js"></script>
   <script src="main.js"></script>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 
 </html>

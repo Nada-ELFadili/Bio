@@ -28,7 +28,7 @@
         $mail->addAddress("EFNada98@gmail.com"); //enter you email address
         $mail->Subject = ("$email ($subject)");
         $mail->Body = $body;
-
+        
         if ($mail->send()) {
             $status = "success";
             $response = "Email is sent!";
